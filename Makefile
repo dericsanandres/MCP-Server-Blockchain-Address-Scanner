@@ -69,7 +69,7 @@ run: $(VENV_NAME)
 		exit 1; \
 	fi
 	@echo "Starting MCP Etherscan Server..."
-	$(VENV_PYTHON) -m mcp_etherscan_server.main
+	$(VENV_PYTHON) -m core.main
 
 # Quick start (setup + run)
 .PHONY: start
@@ -81,7 +81,7 @@ start: setup
 .PHONY: test
 test: $(VENV_NAME)
 	@echo "Testing installation..."
-	$(VENV_PYTHON) -c "import mcp_etherscan_server; print('Package imports successfully')"
+	$(VENV_PYTHON) -c "import core; print('Package imports successfully')"
 	@echo "Checking dependencies..."
 	$(VENV_PIP) check
 

@@ -35,7 +35,7 @@ setup(
     install_requires=requirements,
     entry_points={
         "console_scripts": [
-            "mcp-etherscan-server=mcp_etherscan_server.main:main",
+            "mcp-etherscan-server=core.main:main",
         ],
     },
 )

@@ -31,7 +31,7 @@ classifiers = [
 ]
 
 [project.scripts]
-mcp-etherscan-server = "mcp_etherscan_server.main:main"
+mcp-etherscan-server = "core.main:main"
 
 [project.urls]
 Homepage = "https://github.com/yourusername/mcp-etherscan-server"
