@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "etherscan": {
+      "command": "python",
+      "args": ["-m", "mcp_etherscan_server.main"],
+      "cwd": "/Users/dericsanandres/Documents/Github/MCP-Server-Blockchain-Address-Scanner",
+      "env": {
+        "ETHERSCAN_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
