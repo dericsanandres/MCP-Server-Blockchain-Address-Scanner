@@ -60,11 +60,13 @@ Add to your Claude Desktop configuration (`~/Library/Application Support/Claude/
 
 ## Available Tools
 
-### check-balance
+### Basic Blockchain Data
+
+**check-balance**
 Get ETH balance for an address.
 - **address**: Ethereum address to check
 
-### get-transactions
+**get-transactions**
 Retrieve transaction history for an address.
 - **address**: Ethereum address
 - **start_block** (optional): Starting block number
@@ -72,19 +74,53 @@ Retrieve transaction history for an address.
 - **page** (optional): Page number (default: 1)
 - **offset** (optional): Results per page (default: 10)
 
-### get-token-transfers
+**get-token-transfers**
 Get ERC20 token transfer events.
 - **address**: Ethereum address
 - **contract_address** (optional): Specific token contract
 - **page** (optional): Page number (default: 1)
 - **offset** (optional): Results per page (default: 10)
 
-### get-contract-abi
+**get-contract-abi**
 Fetch ABI for a verified smart contract.
 - **address**: Contract address
 
-### get-gas-prices
+**get-gas-prices**
 Get current gas prices (safe, standard, fast).
+
+### 🐋 Whale Detection & Analysis
+
+**analyze-whale**
+Comprehensive whale analysis of an Ethereum address.
+- **address**: Ethereum address to analyze
+- Provides detailed metrics including classification, activity scores, risk assessment, and transaction patterns
+
+**detect-whale-class**
+Quick whale classification based on ETH balance.
+- **address**: Ethereum address to classify
+- Returns whale category: Mega Whale (>10K ETH), Large Whale (1K-10K), Medium Whale (100-1K), Small Whale (10-100), or Shrimp (<10)
+
+**compare-whales**
+Compare multiple addresses for whale analysis.
+- **addresses**: Comma-separated list of Ethereum addresses (max 10)
+- Ranks addresses by whale size with comparative metrics
+
+### 🔍 Whale Discovery & Tracking
+
+**discover-whale-movements**
+Find recent large whale movements and transactions.
+- **min_eth_value** (optional): Minimum ETH value to consider (default: 100)
+- Scans recent transactions from known whales and exchanges to identify significant movements
+
+**discover-top-whales**
+Discover whale addresses by analyzing transaction networks.
+- **min_balance** (optional): Minimum ETH balance to qualify (default: 1000)
+- Finds new whale addresses by analyzing participants in large transactions
+
+**track-exchange-whales**
+Track whale deposits and withdrawals from major exchanges.
+- **min_amount** (optional): Minimum ETH amount to track (default: 500)
+- Monitors exchange flows for potential market impact analysis
 
 ## Configuration
 
